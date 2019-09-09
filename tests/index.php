@@ -11,12 +11,11 @@ use Fc\Utils\Small\Small;
 use Fc\Utils\Sms\SmsUtil;
 
 $configPath = dirname(__DIR__);
-//$x = (new OssFactory)->api($configPath)->hello();
-//echo $x . PHP_EOL;
-//$s = (new OssFactory)->api($configPath)->upload('fc/a', 'a.png');
-//var_dump($s);
 
-$s = (new SmsUtil($configPath))->send(13395057221, "hello fc test");
+$s = (new OssFactory)->api($configPath)->upload('fc/a', 'a.png');
+var_dump($s);
+
+$s = (new SmsUtil($configPath))->send(13395058888, "hello fc test");
 var_dump($s);
 
 $a = Small::getRandomNum(6);
